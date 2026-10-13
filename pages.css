@@ -35,3 +35,4 @@ footer{padding:36px 0 56px;border-top:1px solid var(--line);color:#7d8999;font-s
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer a{color:var(--muted)}
 @media(max-width:620px){.navlinks{gap:14px;font-size:.82rem}.nav .brand span.name{display:none}}
+footer .links{display:flex;flex-wrap:wrap;gap:18px}
