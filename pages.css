@@ -8,8 +8,7 @@ a{color:var(--cyan)}
 .nav{position:sticky;top:0;z-index:20;border-bottom:1px solid #ffffff12;background:#080a0edb;backdrop-filter:blur(18px)}
 .nav .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;gap:11px;align-items:center;font-weight:750;letter-spacing:-.02em;color:var(--text);text-decoration:none}
-.mark{width:32px;height:32px;border-radius:10px;background:linear-gradient(145deg,var(--cyan),#4e7cff);display:grid;place-items:center;color:#071017}
-.mark svg{width:20px}
+.mark{width:38px;height:38px;display:block}
 .navlinks{display:flex;gap:22px;font-size:.9rem}
 .navlinks a{color:var(--muted);text-decoration:none}
 .navlinks a:hover,.navlinks a[aria-current]{color:var(--text)}

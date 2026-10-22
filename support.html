@@ -6,11 +6,12 @@
   <meta name="description" content="FileSniffer support: contact the developer and find answers to common questions.">
   <meta name="theme-color" content="#0b0d12">
   <title>FileSniffer Support</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d12'/%3E%3Cpath d='M12 22a6 6 0 016-6h12l5 6h11a6 6 0 016 6v18a6 6 0 01-6 6H18a6 6 0 01-6-6z' fill='%235ad1ff'/%3E%3Ccircle cx='40' cy='34' r='8' fill='none' stroke='%230b0d12' stroke-width='4'/%3E%3Cpath d='M46 40l7 7' stroke='%230b0d12' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <link rel="stylesheet" href="pages.css">
 </head>
 <body>
-  <nav class="nav"><div class="wrap"><a class="brand" href="./"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7.5h7l2 2h9v9.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="currentColor"/><circle cx="15" cy="14" r="3.5" stroke="#071017" stroke-width="2"/><path d="m17.5 16.5 3 3" stroke="#071017" stroke-width="2" stroke-linecap="round"/></svg></span><span class="name">FileSniffer</span></a><div class="navlinks"><a href="./">Home</a><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy Policy</a></div></div></nav>
+  <nav class="nav"><div class="wrap"><a class="brand" href="./"><img class="mark" src="icon.png" alt="" width="38" height="38"><span class="name">FileSniffer</span></a><div class="navlinks"><a href="./">Home</a><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy Policy</a></div></div></nav>
 
   <main class="wrap">
     <header>
@@ -31,7 +32,7 @@
       <h3>Frequently asked questions</h3>
       <div class="faq">
         <h3>How do I get started?</h3>
-        <p>Click <strong>Target Folders</strong> in the toolbar, click <strong>+</strong>, and choose a folder (for example Downloads). Indexing starts right away. Then type in the search field; results update as you type.</p>
+        <p>Click <strong>Target Folders</strong> in the toolbar, click <strong>+</strong>, and choose a folder (for example Downloads). Indexing starts right away. Then type in the search field; results update as you type. On first launch, an on-screen guide walks you through adding a folder and the main buttons.</p>
         <h3>A file doesn't appear in the search results.</h3>
         <p>Make sure the folder containing the file is added in <strong>Target Folders</strong>. If it is, click <strong>Refresh</strong>, and check that the name isn't matched by a rule in <strong>Exclusions</strong>.</p>
         <h3>Some folders (Mail, Messages, and so on) aren't searched.</h3>
@@ -42,6 +43,8 @@
         <p>When a drive is disconnected, its target folder is shown as not found and its files are removed from the list. When you connect the drive again, the folder is indexed again automatically.</p>
         <h3>Changes made while the app was closed aren't shown.</h3>
         <p>Live watching works only while the app is running. Click <strong>Refresh</strong>, or set an <strong>Auto-Index</strong> interval.</p>
+        <h3>How do I rename many files at once?</h3>
+        <p>Select several items in the results, then choose <strong>Rename…</strong> from the context menu. You can replace text found in every name or add text before or after the names, and add numbers in list order. Files keep their extensions, and you preview the new names before applying them. While renaming, click <strong>Renaming…</strong> in the status bar and confirm to stop; items already renamed keep their new names and the rest keep their original names.</p>
         <h3>Where can I learn the search syntax?</h3>
         <p>Open <strong>Help</strong> (⌘?) in the app and choose "Search Syntax and Examples". It lists the operators, wildcards, and functions with examples.</p>
       </div>
@@ -59,7 +62,7 @@
       <h3>자주 묻는 질문</h3>
       <div class="faq">
         <h3>어떻게 시작하나요?</h3>
-        <p>툴바의 <strong>대상 폴더</strong>를 누르고 <strong>+</strong>로 폴더(예: 다운로드)를 고르면 바로 색인이 시작됩니다. 그다음 검색창에 입력하면 입력하는 대로 결과가 바뀝니다.</p>
+        <p>툴바의 <strong>대상 폴더</strong>를 누르고 <strong>+</strong>로 폴더(예: 다운로드)를 고르면 바로 색인이 시작됩니다. 그다음 검색창에 입력하면 입력하는 대로 결과가 바뀝니다. 처음 실행하면 화면 안내가 대상 폴더 추가부터 주요 버튼까지 차례로 보여 줍니다.</p>
         <h3>검색 결과에 파일이 나오지 않아요.</h3>
         <p>툴바의 <strong>대상 폴더</strong>에 그 파일이 들어 있는 폴더가 추가되어 있는지 확인하세요. 추가되어 있다면 <strong>새로 고침</strong>을 누르고, <strong>제외 목록</strong>에 해당 이름이 들어 있지 않은지 확인하세요.</p>
         <h3>일부 폴더(메일, 메시지 등)가 검색되지 않아요.</h3>
@@ -70,6 +73,8 @@
         <p>드라이브를 분리하면 해당 대상 폴더는 "찾을 수 없음"으로 표시되고 목록에서 빠집니다. 다시 연결하면 자동으로 다시 색인됩니다.</p>
         <h3>앱이 꺼져 있는 동안 바뀐 파일이 반영되지 않아요.</h3>
         <p>실시간 감시는 앱이 실행 중일 때만 동작합니다. <strong>새로 고침</strong>을 누르거나 <strong>자동 색인</strong> 주기를 설정하세요.</p>
+        <h3>여러 파일의 이름을 한 번에 바꾸고 싶어요.</h3>
+        <p>검색 결과에서 여러 항목을 선택하고 우클릭 메뉴의 <strong>이름 변경…</strong>을 고르세요. 모든 이름에 들어 있는 문구를 바꾸거나 이름 앞뒤에 문구를 붙일 수 있고, 목록 순서대로 번호도 매길 수 있습니다. 파일의 확장자는 바뀌지 않으며, 바뀔 이름을 미리 보고 적용합니다. 변경하는 동안 상태 표시줄의 <strong>일괄 변경 중…</strong> 표시를 클릭한 뒤 확인하면 중지됩니다. 이미 바뀐 항목은 그대로 두고, 남은 항목은 원래 이름으로 둡니다.</p>
         <h3>검색 문법을 알고 싶어요.</h3>
         <p>앱의 <strong>도움말</strong>(⌘?) → "검색 문법과 예시"에 연산자, 와일드카드, 함수와 예시가 정리되어 있습니다.</p>
       </div>
@@ -87,7 +92,7 @@
       <h3>よくある質問</h3>
       <div class="faq">
         <h3>使い始めるには？</h3>
-        <p>ツールバーの<strong>対象フォルダ</strong>をクリックし、<strong>+</strong>でフォルダ（例：ダウンロード）を選ぶとすぐに索引の作成が始まります。あとは検索フィールドに入力すると、入力に合わせて結果が更新されます。</p>
+        <p>ツールバーの<strong>対象フォルダ</strong>をクリックし、<strong>+</strong>でフォルダ（例：ダウンロード）を選ぶとすぐに索引の作成が始まります。あとは検索フィールドに入力すると、入力に合わせて結果が更新されます。初めて起動すると、対象フォルダの追加から主なボタンまで画面上のガイドが順に案内します。</p>
         <h3>検索結果にファイルが表示されません。</h3>
         <p>そのファイルを含むフォルダが<strong>対象フォルダ</strong>に追加されているか確認してください。追加されている場合は<strong>更新</strong>をクリックし、<strong>除外リスト</strong>にその名前が含まれていないか確認してください。</p>
         <h3>一部のフォルダ（メール、メッセージなど）が検索されません。</h3>
@@ -98,6 +103,8 @@
         <p>ドライブを取り外すと、その対象フォルダは「見つかりません」と表示され、一覧から外れます。再接続すると自動的に索引が作成し直されます。</p>
         <h3>アプリを終了している間の変更が反映されません。</h3>
         <p>リアルタイム監視はアプリの実行中のみ動作します。<strong>更新</strong>をクリックするか、<strong>自動索引</strong>の間隔を設定してください。</p>
+        <h3>複数のファイルの名前をまとめて変更したいです。</h3>
+        <p>検索結果で複数の項目を選択し、右クリックメニューの<strong>名前を変更…</strong>を選んでください。すべての名前に含まれる文字列を置き換えたり、名前の前後に文字列を追加したりでき、一覧の順に番号も付けられます。ファイルの拡張子は変わらず、新しい名前をプレビューしてから適用します。変更中はステータスバーの<strong>一括変更中…</strong>をクリックして確認すると中止します。すでに変更した項目はそのまま、残りの項目は元の名前のままになります。</p>
         <h3>検索構文を知りたいです。</h3>
         <p>アプリの<strong>ヘルプ</strong>（⌘?）→「検索構文と例」に、演算子、ワイルドカード、関数と例がまとめてあります。</p>
       </div>
@@ -115,7 +122,7 @@
       <h3>常见问题</h3>
       <div class="faq">
         <h3>如何开始使用？</h3>
-        <p>点按工具栏中的<strong>目标文件夹</strong>，再点按 <strong>+</strong> 选择一个文件夹（例如"下载"），索引会立即开始。之后在搜索栏中输入，结果会随输入即时更新。</p>
+        <p>点按工具栏中的<strong>目标文件夹</strong>，再点按 <strong>+</strong> 选择一个文件夹（例如"下载"），索引会立即开始。之后在搜索栏中输入，结果会随输入即时更新。首次启动时，屏幕引导会依次介绍如何添加文件夹以及主要按钮。</p>
         <h3>搜索结果中没有出现某个文件。</h3>
         <p>请确认包含该文件的文件夹已添加到<strong>目标文件夹</strong>中。如果已添加，请点按<strong>刷新</strong>，并确认<strong>排除列表</strong>中没有包含该名称。</p>
         <h3>部分文件夹（邮件、信息等）无法被搜索。</h3>
@@ -126,6 +133,8 @@
         <p>断开驱动器后，对应的目标文件夹会显示为"找不到"，并从列表中移除。重新连接后会自动重新索引。</p>
         <h3>App 关闭期间的更改没有反映出来。</h3>
         <p>实时监视仅在 App 运行时工作。请点按<strong>刷新</strong>，或设置<strong>自动索引</strong>间隔。</p>
+        <h3>如何一次重命名多个文件？</h3>
+        <p>在搜索结果中选择多个项目，然后从右键菜单中选取<strong>重命名…</strong>。你可以替换所有名称中都包含的文字，或在名称前后添加文字，还可以按列表顺序添加编号。文件的扩展名不会更改，应用前可以预览新名称。重命名期间，点按状态栏中的<strong>正在批量重命名…</strong>并确认即可停止。已重命名的项目保留新名称，其余项目保留原名称。</p>
         <h3>在哪里可以了解搜索语法？</h3>
         <p>打开 App 的<strong>帮助</strong>（⌘?）→"搜索语法和示例"，其中整理了运算符、通配符、函数及示例。</p>
       </div>
@@ -143,7 +152,7 @@
       <h3>常見問題</h3>
       <div class="faq">
         <h3>如何開始使用？</h3>
-        <p>按一下工具列中的<strong>目標資料夾</strong>，再按一下 <strong>+</strong> 選擇一個資料夾（例如「下載項目」），索引會立即開始。之後在搜尋欄位中輸入，結果會隨輸入即時更新。</p>
+        <p>按一下工具列中的<strong>目標資料夾</strong>，再按一下 <strong>+</strong> 選擇一個資料夾（例如「下載項目」），索引會立即開始。之後在搜尋欄位中輸入，結果會隨輸入即時更新。首次啟動時，螢幕導覽會依序介紹如何加入資料夾以及主要按鈕。</p>
         <h3>搜尋結果中沒有出現某個檔案。</h3>
         <p>請確認包含該檔案的資料夾已加入<strong>目標資料夾</strong>。如果已加入，請按一下<strong>重新整理</strong>，並確認<strong>排除清單</strong>中沒有包含該名稱。</p>
         <h3>部分資料夾（郵件、訊息等）無法被搜尋。</h3>
@@ -154,12 +163,15 @@
         <p>中斷連接磁碟後，對應的目標資料夾會顯示為「找不到」，並從列表中移除。重新連接後會自動重新索引。</p>
         <h3>App 關閉期間的變更沒有反映出來。</h3>
         <p>即時監看僅在 App 執行時運作。請按一下<strong>重新整理</strong>，或設定<strong>自動索引</strong>間隔。</p>
+        <h3>如何一次重新命名多個檔案？</h3>
+        <p>在搜尋結果中選取多個項目，然後從右鍵選單中選擇<strong>重新命名…</strong>。你可以取代所有名稱中都包含的文字，或在名稱前後加入文字，還可以依列表順序加上編號。檔案的副檔名不會變更，套用前可以預覽新名稱。重新命名期間，按一下狀態列中的<strong>正在批次重新命名…</strong>並確認即可停止。已重新命名的項目保留新名稱，其餘項目保留原名稱。</p>
         <h3>在哪裡可以了解搜尋語法？</h3>
         <p>開啟 App 的<strong>說明</strong>（⌘?）→「搜尋語法與範例」，其中整理了運算子、萬用字元、函式及範例。</p>
       </div>
     </section>
   </main>
 
-  <footer><div class="wrap"><span><strong>FileSniffer</strong>&nbsp; © 2026 seryugun</span><span class="links"><a href="privacy.html">Privacy Policy</a><a href="mailto:seryugun@icloud.com">seryugun@icloud.com</a></span></div></footer>
+  <footer><div class="wrap"><span><strong>FileSniffer</strong>&nbsp; © 2026 seryugun</span><span class="links"><a data-appstore href="https://apps.apple.com/app/filesniffer/id6819963720?mt=12">Mac App Store</a><a href="privacy.html">Privacy Policy</a><a href="mailto:seryugun@icloud.com">seryugun@icloud.com</a></span></div></footer>
+  <script src="site.js"></script>
 </body>
 </html>
