@@ -30,6 +30,12 @@ p,li{color:#d3dbe6}
 .faq{border-top:1px solid #ffffff10;padding:4px 0}
 .faq h3{margin:20px 0 6px}
 .faq p{margin:0 0 18px}
+.faq ol{margin:0 0 12px;padding-left:1.5em}
+.faq ol li{margin:3px 0}
+.faq ol+p{margin-top:6px}
+/* 질문 제목 앞의 운영체제 표시(Mac은 노트북, Windows는 창 모양) */
+.os,.apple-icon{display:inline-block;width:1em;height:1em;vertical-align:-.12em;margin-right:.4em;color:var(--cyan);fill:currentColor}
+.folder-icon{display:inline-block;width:.9em;height:.9em;color:var(--cyan);fill:currentColor;transform:scaleX(1.15);margin-right:.25em;vertical-align:-.08em}
 footer{padding:36px 0 56px;border-top:1px solid var(--line);color:#7d8999;font-size:.9rem}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer a{color:var(--muted)}

@@ -36,3 +36,14 @@ function run() {
 
 const observer = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Support-page feedback links open a prefilled message with useful diagnostics.
+document.querySelectorAll('[data-feedback]').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  const lang = a.closest('.lang')?.id || 'en';
+  const language = { ko: 'ko', en: 'en', ja: 'ja', 'zh-hans': 'zh-Hans', 'zh-hant': 'zh-Hant' }[lang] || lang;
+  const platform = /Mac/.test(navigator.platform) ? 'macOS' : /Win/.test(navigator.platform) ? 'Windows' : navigator.platform || 'Unknown';
+  const body = `문제나 의견을 여기에 적어 주세요. 문제가 발생했다면 무엇을 했을 때 어떻게 되었는지 알려 주시면 도움이 됩니다.\n\n---\nApp: FileSniffer {Version input required}\nOS: {OS input required}\nLanguage: ${language}`;
+  const subject = language === 'ko' ? 'FileSniffer 피드백' : 'FileSniffer Support';
+  location.href = `mailto:seryugun@icloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}));

@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="pages.css">
 </head>
 <body>
+  <!-- 질문 제목 앞의 운영체제 아이콘. 제목에서 <svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>처럼 쓴다 -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="os-windows" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h8.4v8.4H3zM12.6 3H21v8.4h-8.4zM3 12.6h8.4V21H3zM12.6 12.6H21V21h-8.4z"/></symbol>
+  </svg>
+
   <nav class="nav"><div class="wrap"><a class="brand" href="./"><img class="mark" src="icon.png" alt="" width="38" height="38"><span class="name">FileSniffer</span></a><div class="navlinks"><a href="./">Home</a><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy Policy</a></div></div></nav>
 
   <main class="wrap">
@@ -25,28 +30,61 @@
       <h2>English</h2>
       <div class="contact">
         <h3>Contact</h3>
-        <p class="email"><a href="mailto:seryugun@icloud.com?subject=FileSniffer%20Support">seryugun@icloud.com</a></p>
-        <p>From the app: click <strong>Send Feedback</strong> at the top right of the Help window, or choose <strong>Help → Send Feedback…</strong> in the menu bar. A new message with the app and macOS versions filled in opens in your mail app.</p>
+        <p class="email"><a data-feedback href="mailto:seryugun@icloud.com?subject=FileSniffer%20Support">seryugun@icloud.com</a></p>
+        <p>From the app: click <strong>Send Feedback</strong> at the top right of the Help window. On Mac, you can also choose <strong>Help → Send Feedback…</strong> in the menu bar. A new message with the app and system (macOS or Windows) versions filled in opens in your mail app.</p>
         <p class="muted">When reporting a problem, please describe what you did and what happened. We read every message and reply as soon as we can.</p>
       </div>
       <h3>Frequently asked questions</h3>
       <div class="faq">
         <h3>How do I get started?</h3>
-        <p>Click <strong>Target Folders</strong> in the toolbar, click <strong>+</strong>, and choose a folder (for example Downloads). Indexing starts right away. Then type in the search field; results update as you type. On first launch, an on-screen guide walks you through adding a folder and the main buttons.</p>
+        <ol>
+          <li>Click <strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Target Folders</strong> in the toolbar.</li>
+          <li>Click <strong>+</strong> and choose a folder (for example Downloads). Indexing starts right away.</li>
+          <li>Type in the search field. Results update as you type.</li>
+        </ol>
+        <p>On first launch, an on-screen guide walks you through adding a folder and the main buttons.</p>
         <h3>A file doesn't appear in the search results.</h3>
-        <p>Make sure the folder containing the file is added in <strong>Target Folders</strong>. If it is, click <strong>Refresh</strong>, and check that the name isn't matched by a rule in <strong>Exclusions</strong>.</p>
-        <h3>Some folders (Mail, Messages, and so on) aren't searched.</h3>
-        <p>macOS protects these folders. Turn on FileSniffer in System Settings &gt; Privacy &amp; Security &gt; <strong>Full Disk Access</strong>, then restart the app. The <strong>Open Settings…</strong> button at the bottom of the Target Folders window takes you there. This permission is optional; the folders you choose are indexed without it.</p>
-        <h3>I can't rename an app (.app) or move it to the Trash.</h3>
+        <ol>
+          <li>Make sure the folder containing the file is added in <strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Target Folders</strong>.</li>
+          <li>If it is, click <strong>Refresh</strong>.</li>
+          <li>Check that the name isn't matched by a rule in <strong>Exclusions</strong>.</li>
+        </ol>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac: Some folders (Mail, Messages, and so on) aren't searched.</h3>
+        <p>macOS protects these folders. To include them:</p>
+        <ol>
+          <li>Click <strong>Open Settings…</strong> at the bottom of the Target Folders window (or open System Settings &gt; Privacy &amp; Security &gt; <strong>Full Disk Access</strong>).</li>
+          <li>Turn on FileSniffer.</li>
+          <li>Restart the app.</li>
+        </ol>
+        <p>This permission is optional; the folders you choose are indexed without it.</p>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac: I can't rename an app (.app) or move it to the Trash.</h3>
         <p>Turn on FileSniffer in System Settings &gt; Privacy &amp; Security &gt; <strong>App Management</strong>.</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows: Deleted files don't go to the Recycle Bin.</h3>
+        <p>Network drives and some removable drives have no Recycle Bin. For items on these drives, FileSniffer asks before deleting them immediately. Items deleted this way can't be restored, so check the list before you confirm.</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows: How do I find files with the same content?</h3>
+        <ol>
+          <li>Click <strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Target Folders</strong> in the toolbar.</li>
+          <li>Turn on <strong>Find files with the same content (hashdupe:)</strong> at the bottom of the window.</li>
+          <li>Type <strong>hashdupe:</strong> in the search field.</li>
+        </ol>
+        <p>FileSniffer reads file contents in the background to compare them, so the first check can take a while with many files or on network drives. Only files that have been checked appear in the results.</p>
         <h3>Files on an external drive disappeared.</h3>
         <p>When a drive is disconnected, its target folder is shown as not found and its files are removed from the list. When you connect the drive again, the folder is indexed again automatically.</p>
         <h3>Changes made while the app was closed aren't shown.</h3>
         <p>Live watching works only while the app is running. Click <strong>Refresh</strong>, or set an <strong>Auto-Index</strong> interval.</p>
         <h3>How do I rename many files at once?</h3>
-        <p>Select several items in the results, then choose <strong>Rename…</strong> from the context menu. You can replace text found in every name or add text before or after the names, and add numbers in list order. Files keep their extensions, and you preview the new names before applying them. While renaming, click <strong>Renaming…</strong> in the status bar and confirm to stop; items already renamed keep their new names and the rest keep their original names.</p>
+        <ol>
+          <li>Select several items in the results.</li>
+          <li>Right-click and choose <strong>Rename…</strong>.</li>
+          <li>Replace text found in every name, or add text before or after the names. You can also add numbers in list order.</li>
+          <li>Check the new names in the preview, then click <strong>Rename</strong>. File extensions don't change.</li>
+        </ol>
+        <p>To stop while renaming, click <strong>Renaming…</strong> in the status bar and confirm. Items already renamed keep their new names, and the rest keep their original names.</p>
         <h3>Where can I learn the search syntax?</h3>
-        <p>Open <strong>Help</strong> (⌘?) in the app and choose "Search Syntax and Examples". It lists the operators, wildcards, and functions with examples.</p>
+        <ol>
+          <li>Open <strong>Help</strong> in the app (⌘? on Mac, F1 on Windows).</li>
+          <li>Choose "Search Syntax and Examples". It lists the operators, wildcards, and functions with examples.</li>
+        </ol>
       </div>
     </section>
 
@@ -55,28 +93,61 @@
       <h2>한국어</h2>
       <div class="contact">
         <h3>문의하기</h3>
-        <p class="email"><a href="mailto:seryugun@icloud.com?subject=FileSniffer%20%EB%AC%B8%EC%9D%98">seryugun@icloud.com</a></p>
-        <p>앱에서 보내기: 도움말 창 오른쪽 위의 <strong>피드백 보내기</strong>, 또는 메뉴 막대의 <strong>도움말 → 피드백 보내기…</strong>를 누르면 앱과 macOS 버전이 적힌 새 메일이 열립니다.</p>
+        <p class="email"><a data-feedback href="mailto:seryugun@icloud.com?subject=FileSniffer%20%EB%AC%B8%EC%9D%98">seryugun@icloud.com</a></p>
+        <p>앱에서 보내기: 도움말 창 오른쪽 위의 <strong>피드백 보내기</strong>를 누르세요. Mac에서는 메뉴 막대의 <strong>도움말 → 피드백 보내기…</strong>로도 보낼 수 있습니다. 앱과 시스템(macOS 또는 Windows) 버전이 적힌 새 메일이 열립니다.</p>
         <p class="muted">문제를 알려 주실 때는 무엇을 했을 때 어떻게 되었는지 적어 주시면 빨리 확인할 수 있습니다. 보내 주신 메일은 모두 읽고 최대한 빨리 답장드립니다.</p>
       </div>
       <h3>자주 묻는 질문</h3>
       <div class="faq">
         <h3>어떻게 시작하나요?</h3>
-        <p>툴바의 <strong>대상 폴더</strong>를 누르고 <strong>+</strong>로 폴더(예: 다운로드)를 고르면 바로 색인이 시작됩니다. 그다음 검색창에 입력하면 입력하는 대로 결과가 바뀝니다. 처음 실행하면 화면 안내가 대상 폴더 추가부터 주요 버튼까지 차례로 보여 줍니다.</p>
+        <ol>
+          <li>툴바의 <strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 대상 폴더</strong>를 누릅니다.</li>
+          <li><strong>+</strong>를 눌러 폴더(예: 다운로드)를 고릅니다. 바로 색인이 시작됩니다.</li>
+          <li>검색창에 입력합니다. 입력하는 대로 결과가 바뀝니다.</li>
+        </ol>
+        <p>처음 실행하면 화면 안내가 대상 폴더 추가부터 주요 버튼까지 차례로 보여 줍니다.</p>
         <h3>검색 결과에 파일이 나오지 않아요.</h3>
-        <p>툴바의 <strong>대상 폴더</strong>에 그 파일이 들어 있는 폴더가 추가되어 있는지 확인하세요. 추가되어 있다면 <strong>새로 고침</strong>을 누르고, <strong>제외 목록</strong>에 해당 이름이 들어 있지 않은지 확인하세요.</p>
-        <h3>일부 폴더(메일, 메시지 등)가 검색되지 않아요.</h3>
-        <p>macOS가 보호하는 폴더입니다. 시스템 설정 &gt; 개인정보 보호 및 보안 &gt; <strong>전체 디스크 접근 권한</strong>에서 FileSniffer를 켜고 앱을 다시 시작하세요. 대상 폴더 창 아래쪽의 <strong>설정 열기…</strong> 버튼으로 바로 갈 수 있습니다. 이 권한은 선택 사항이며, 켜지 않아도 고른 폴더는 색인됩니다.</p>
-        <h3>앱(.app)의 이름을 바꾸거나 휴지통으로 옮기지 못해요.</h3>
+        <ol>
+          <li>툴바의 <strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 대상 폴더</strong>에 그 파일이 들어 있는 폴더가 추가되어 있는지 확인하세요.</li>
+          <li>추가되어 있다면 <strong>새로 고침</strong>을 누르세요.</li>
+          <li><strong>제외 목록</strong>에 해당 이름이 들어 있지 않은지 확인하세요.</li>
+        </ol>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac: 일부 폴더(메일, 메시지 등)가 검색되지 않아요.</h3>
+        <p>macOS가 보호하는 폴더입니다. 검색에 넣으려면:</p>
+        <ol>
+          <li>대상 폴더 창 아래쪽의 <strong>설정 열기…</strong>를 누릅니다(또는 시스템 설정 &gt; 개인정보 보호 및 보안 &gt; <strong>전체 디스크 접근 권한</strong>).</li>
+          <li>FileSniffer를 켭니다.</li>
+          <li>앱을 다시 시작합니다.</li>
+        </ol>
+        <p>이 권한은 선택 사항이며, 켜지 않아도 고른 폴더는 색인됩니다.</p>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac: 앱(.app)의 이름을 바꾸거나 휴지통으로 옮기지 못해요.</h3>
         <p>시스템 설정 &gt; 개인정보 보호 및 보안 &gt; <strong>앱 관리</strong>에서 FileSniffer를 켜세요.</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows: 삭제한 파일이 휴지통으로 가지 않아요.</h3>
+        <p>네트워크 드라이브와 일부 이동식 드라이브에는 휴지통이 없습니다. 이런 드라이브의 항목은 즉시 삭제할지 먼저 묻습니다. 즉시 삭제한 항목은 되돌릴 수 없으니 목록을 확인한 뒤 진행하세요.</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows: 내용이 같은 파일을 찾고 싶어요.</h3>
+        <ol>
+          <li>툴바의 <strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 대상 폴더</strong>를 누릅니다.</li>
+          <li>창 아래쪽의 <strong>내용이 같은 파일 찾기 (hashdupe:)</strong>를 켭니다.</li>
+          <li>검색창에 <strong>hashdupe:</strong>를 입력합니다.</li>
+        </ol>
+        <p>파일 내용을 백그라운드에서 읽어 비교하므로, 파일이 많거나 네트워크 드라이브에 있으면 처음 확인에 시간이 걸릴 수 있습니다. 확인이 끝난 파일만 결과에 나옵니다.</p>
         <h3>외장 드라이브의 파일이 사라졌어요.</h3>
         <p>드라이브를 분리하면 해당 대상 폴더는 "찾을 수 없음"으로 표시되고 목록에서 빠집니다. 다시 연결하면 자동으로 다시 색인됩니다.</p>
         <h3>앱이 꺼져 있는 동안 바뀐 파일이 반영되지 않아요.</h3>
         <p>실시간 감시는 앱이 실행 중일 때만 동작합니다. <strong>새로 고침</strong>을 누르거나 <strong>자동 색인</strong> 주기를 설정하세요.</p>
         <h3>여러 파일의 이름을 한 번에 바꾸고 싶어요.</h3>
-        <p>검색 결과에서 여러 항목을 선택하고 우클릭 메뉴의 <strong>이름 변경…</strong>을 고르세요. 모든 이름에 들어 있는 문구를 바꾸거나 이름 앞뒤에 문구를 붙일 수 있고, 목록 순서대로 번호도 매길 수 있습니다. 파일의 확장자는 바뀌지 않으며, 바뀔 이름을 미리 보고 적용합니다. 변경하는 동안 상태 표시줄의 <strong>일괄 변경 중…</strong> 표시를 클릭한 뒤 확인하면 중지됩니다. 이미 바뀐 항목은 그대로 두고, 남은 항목은 원래 이름으로 둡니다.</p>
+        <ol>
+          <li>검색 결과에서 여러 항목을 선택합니다.</li>
+          <li>우클릭 메뉴의 <strong>이름 변경…</strong>을 고릅니다.</li>
+          <li>모든 이름에 들어 있는 문구를 바꾸거나 이름 앞뒤에 문구를 붙입니다. 목록 순서대로 번호도 매길 수 있습니다.</li>
+          <li>바뀔 이름을 미리 보고 <strong>이름 변경</strong>을 누릅니다. 파일의 확장자는 바뀌지 않습니다.</li>
+        </ol>
+        <p>변경하는 동안 상태 표시줄의 <strong>일괄 변경 중…</strong> 표시를 클릭한 뒤 확인하면 중지됩니다. 이미 바뀐 항목은 그대로 두고, 남은 항목은 원래 이름으로 둡니다.</p>
         <h3>검색 문법을 알고 싶어요.</h3>
-        <p>앱의 <strong>도움말</strong>(⌘?) → "검색 문법과 예시"에 연산자, 와일드카드, 함수와 예시가 정리되어 있습니다.</p>
+        <ol>
+          <li>앱의 <strong>도움말</strong>을 엽니다(Mac은 ⌘?, Windows는 F1).</li>
+          <li>"검색 문법과 예시"를 고릅니다. 연산자, 와일드카드, 함수와 예시가 정리되어 있습니다.</li>
+        </ol>
       </div>
     </section>
 
@@ -85,28 +156,61 @@
       <h2>日本語</h2>
       <div class="contact">
         <h3>お問い合わせ</h3>
-        <p class="email"><a href="mailto:seryugun@icloud.com?subject=FileSniffer%20Support">seryugun@icloud.com</a></p>
-        <p>アプリから送信：ヘルプウインドウ右上の<strong>フィードバックを送信</strong>、またはメニューバーの<strong>ヘルプ → フィードバックを送信…</strong>を選ぶと、アプリと macOS のバージョンが記入された新規メールが開きます。</p>
+        <p class="email"><a data-feedback href="mailto:seryugun@icloud.com?subject=FileSniffer%20Support">seryugun@icloud.com</a></p>
+        <p>アプリから送信：ヘルプウインドウ右上の<strong>フィードバックを送信</strong>をクリックしてください。Mac ではメニューバーの<strong>ヘルプ → フィードバックを送信…</strong>からも送れます。アプリとシステム（macOS または Windows）のバージョンが記入された新規メールが開きます。</p>
         <p class="muted">問題をお知らせいただく際は、何をしたときにどうなったかをお書きください。いただいたメールはすべて読み、できるだけ早くお返事します。</p>
       </div>
       <h3>よくある質問</h3>
       <div class="faq">
         <h3>使い始めるには？</h3>
-        <p>ツールバーの<strong>対象フォルダ</strong>をクリックし、<strong>+</strong>でフォルダ（例：ダウンロード）を選ぶとすぐに索引の作成が始まります。あとは検索フィールドに入力すると、入力に合わせて結果が更新されます。初めて起動すると、対象フォルダの追加から主なボタンまで画面上のガイドが順に案内します。</p>
+        <ol>
+          <li>ツールバーの<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 対象フォルダ</strong>をクリックします。</li>
+          <li><strong>+</strong>をクリックしてフォルダ（例：ダウンロード）を選びます。すぐに索引の作成が始まります。</li>
+          <li>検索フィールドに入力します。入力に合わせて結果が更新されます。</li>
+        </ol>
+        <p>初めて起動すると、対象フォルダの追加から主なボタンまで画面上のガイドが順に案内します。</p>
         <h3>検索結果にファイルが表示されません。</h3>
-        <p>そのファイルを含むフォルダが<strong>対象フォルダ</strong>に追加されているか確認してください。追加されている場合は<strong>更新</strong>をクリックし、<strong>除外リスト</strong>にその名前が含まれていないか確認してください。</p>
-        <h3>一部のフォルダ（メール、メッセージなど）が検索されません。</h3>
-        <p>macOS が保護しているフォルダです。システム設定 &gt; プライバシーとセキュリティ &gt; <strong>フルディスクアクセス</strong>で FileSniffer をオンにし、アプリを再起動してください。対象フォルダウインドウ下部の<strong>設定を開く…</strong>ボタンから直接開けます。この権限は任意で、オンにしなくても選んだフォルダは索引されます。</p>
-        <h3>アプリ（.app）の名前を変更したり、ゴミ箱に入れたりできません。</h3>
+        <ol>
+          <li>そのファイルを含むフォルダが<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 対象フォルダ</strong>に追加されているか確認してください。</li>
+          <li>追加されている場合は<strong>更新</strong>をクリックしてください。</li>
+          <li><strong>除外リスト</strong>にその名前が含まれていないか確認してください。</li>
+        </ol>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac：一部のフォルダ（メール、メッセージなど）が検索されません。</h3>
+        <p>macOS が保護しているフォルダです。検索に含めるには：</p>
+        <ol>
+          <li>対象フォルダウインドウ下部の<strong>設定を開く…</strong>をクリックします（またはシステム設定 &gt; プライバシーとセキュリティ &gt; <strong>フルディスクアクセス</strong>）。</li>
+          <li>FileSniffer をオンにします。</li>
+          <li>アプリを再起動します。</li>
+        </ol>
+        <p>この権限は任意で、オンにしなくても選んだフォルダは索引されます。</p>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac：アプリ（.app）の名前を変更したり、ゴミ箱に入れたりできません。</h3>
         <p>システム設定 &gt; プライバシーとセキュリティ &gt; <strong>アプリ管理</strong>で FileSniffer をオンにしてください。</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows：削除したファイルがごみ箱に入りません。</h3>
+        <p>ネットワークドライブや一部のリムーバブルドライブにはごみ箱がありません。こうしたドライブの項目は、すぐに削除するかを先に確認します。すぐに削除した項目は元に戻せないため、一覧を確認してから進めてください。</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows：内容が同じファイルを探したいです。</h3>
+        <ol>
+          <li>ツールバーの<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 対象フォルダ</strong>をクリックします。</li>
+          <li>ウインドウ下部の<strong>内容が同じファイルを探す（hashdupe:）</strong>をオンにします。</li>
+          <li>検索欄に <strong>hashdupe:</strong> と入力します。</li>
+        </ol>
+        <p>ファイルの内容をバックグラウンドで読み込んで比較するため、ファイルが多い場合やネットワークドライブにある場合は、最初の確認に時間がかかることがあります。確認が終わったファイルだけが結果に表示されます。</p>
         <h3>外部ドライブのファイルが消えました。</h3>
         <p>ドライブを取り外すと、その対象フォルダは「見つかりません」と表示され、一覧から外れます。再接続すると自動的に索引が作成し直されます。</p>
         <h3>アプリを終了している間の変更が反映されません。</h3>
         <p>リアルタイム監視はアプリの実行中のみ動作します。<strong>更新</strong>をクリックするか、<strong>自動索引</strong>の間隔を設定してください。</p>
         <h3>複数のファイルの名前をまとめて変更したいです。</h3>
-        <p>検索結果で複数の項目を選択し、右クリックメニューの<strong>名前を変更…</strong>を選んでください。すべての名前に含まれる文字列を置き換えたり、名前の前後に文字列を追加したりでき、一覧の順に番号も付けられます。ファイルの拡張子は変わらず、新しい名前をプレビューしてから適用します。変更中はステータスバーの<strong>一括変更中…</strong>をクリックして確認すると中止します。すでに変更した項目はそのまま、残りの項目は元の名前のままになります。</p>
+        <ol>
+          <li>検索結果で複数の項目を選択します。</li>
+          <li>右クリックメニューの<strong>名前を変更…</strong>を選びます。</li>
+          <li>すべての名前に含まれる文字列を置き換えるか、名前の前後に文字列を追加します。一覧の順に番号も付けられます。</li>
+          <li>新しい名前をプレビューで確認し、<strong>名前を変更</strong>をクリックします。ファイルの拡張子は変わりません。</li>
+        </ol>
+        <p>変更中はステータスバーの<strong>一括変更中…</strong>をクリックして確認すると中止します。すでに変更した項目はそのまま、残りの項目は元の名前のままになります。</p>
         <h3>検索構文を知りたいです。</h3>
-        <p>アプリの<strong>ヘルプ</strong>（⌘?）→「検索構文と例」に、演算子、ワイルドカード、関数と例がまとめてあります。</p>
+        <ol>
+          <li>アプリの<strong>ヘルプ</strong>を開きます（Mac は ⌘?、Windows は F1）。</li>
+          <li>「検索構文と例」を選びます。演算子、ワイルドカード、関数と例がまとめてあります。</li>
+        </ol>
       </div>
     </section>
 
@@ -115,28 +219,61 @@
       <h2>简体中文</h2>
       <div class="contact">
         <h3>联系我们</h3>
-        <p class="email"><a href="mailto:seryugun@icloud.com?subject=FileSniffer%20Support">seryugun@icloud.com</a></p>
-        <p>从 App 发送：点按帮助窗口右上角的<strong>发送反馈</strong>，或在菜单栏中选择<strong>帮助 → 发送反馈…</strong>，邮件 App 中会打开一封已填好 App 和 macOS 版本的新邮件。</p>
+        <p class="email"><a data-feedback href="mailto:seryugun@icloud.com?subject=FileSniffer%20Support">seryugun@icloud.com</a></p>
+        <p>从 App 发送：点按帮助窗口右上角的<strong>发送反馈</strong>。在 Mac 上也可以在菜单栏中选择<strong>帮助 → 发送反馈…</strong>。邮件 App 中会打开一封已填好 App 和系统（macOS 或 Windows）版本的新邮件。</p>
         <p class="muted">报告问题时，请说明您做了什么以及发生了什么。我们会阅读每一封邮件并尽快回复。</p>
       </div>
       <h3>常见问题</h3>
       <div class="faq">
         <h3>如何开始使用？</h3>
-        <p>点按工具栏中的<strong>目标文件夹</strong>，再点按 <strong>+</strong> 选择一个文件夹（例如"下载"），索引会立即开始。之后在搜索栏中输入，结果会随输入即时更新。首次启动时，屏幕引导会依次介绍如何添加文件夹以及主要按钮。</p>
+        <ol>
+          <li>点按工具栏中的<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 目标文件夹</strong>。</li>
+          <li>点按 <strong>+</strong> 选择一个文件夹（例如"下载"），索引会立即开始。</li>
+          <li>在搜索栏中输入，结果会随输入即时更新。</li>
+        </ol>
+        <p>首次启动时，屏幕引导会依次介绍如何添加文件夹以及主要按钮。</p>
         <h3>搜索结果中没有出现某个文件。</h3>
-        <p>请确认包含该文件的文件夹已添加到<strong>目标文件夹</strong>中。如果已添加，请点按<strong>刷新</strong>，并确认<strong>排除列表</strong>中没有包含该名称。</p>
-        <h3>部分文件夹（邮件、信息等）无法被搜索。</h3>
-        <p>这些是 macOS 保护的文件夹。请在 系统设置 &gt; 隐私与安全性 &gt; <strong>完全磁盘访问权限</strong> 中打开 FileSniffer，然后重新启动 App。也可以点按目标文件夹窗口底部的<strong>打开设置…</strong>按钮直接前往。此权限为可选项，不打开也会索引您选择的文件夹。</p>
-        <h3>无法给 App（.app）重命名或将其移到废纸篓。</h3>
+        <ol>
+          <li>请确认包含该文件的文件夹已添加到<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 目标文件夹</strong>中。</li>
+          <li>如果已添加，请点按<strong>刷新</strong>。</li>
+          <li>请确认<strong>排除列表</strong>中没有包含该名称。</li>
+        </ol>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac：部分文件夹（邮件、信息等）无法被搜索。</h3>
+        <p>这些是 macOS 保护的文件夹。要将它们加入搜索：</p>
+        <ol>
+          <li>点按目标文件夹窗口底部的<strong>打开设置…</strong>（或前往 系统设置 &gt; 隐私与安全性 &gt; <strong>完全磁盘访问权限</strong>）。</li>
+          <li>打开 FileSniffer。</li>
+          <li>重新启动 App。</li>
+        </ol>
+        <p>此权限为可选项，不打开也会索引您选择的文件夹。</p>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac：无法给 App（.app）重命名或将其移到废纸篓。</h3>
         <p>请在 系统设置 &gt; 隐私与安全性 &gt; <strong>App 管理</strong> 中打开 FileSniffer。</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows：删除的文件没有进入回收站。</h3>
+        <p>网络驱动器和部分可移动驱动器没有回收站。对于这些驱动器上的项目，FileSniffer 会先询问是否立即删除。立即删除的项目无法恢复，请确认列表后再继续。</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows：如何查找内容相同的文件？</h3>
+        <ol>
+          <li>点按工具栏中的<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 目标文件夹</strong>。</li>
+          <li>打开窗口底部的<strong>查找内容相同的文件（hashdupe:）</strong>。</li>
+          <li>在搜索框中输入 <strong>hashdupe:</strong>。</li>
+        </ol>
+        <p>FileSniffer 会在后台读取文件内容进行比较，文件较多或位于网络驱动器时，首次检查可能需要一些时间。只有检查完成的文件才会出现在结果中。</p>
         <h3>外置驱动器上的文件不见了。</h3>
         <p>断开驱动器后，对应的目标文件夹会显示为"找不到"，并从列表中移除。重新连接后会自动重新索引。</p>
         <h3>App 关闭期间的更改没有反映出来。</h3>
         <p>实时监视仅在 App 运行时工作。请点按<strong>刷新</strong>，或设置<strong>自动索引</strong>间隔。</p>
         <h3>如何一次重命名多个文件？</h3>
-        <p>在搜索结果中选择多个项目，然后从右键菜单中选取<strong>重命名…</strong>。你可以替换所有名称中都包含的文字，或在名称前后添加文字，还可以按列表顺序添加编号。文件的扩展名不会更改，应用前可以预览新名称。重命名期间，点按状态栏中的<strong>正在批量重命名…</strong>并确认即可停止。已重命名的项目保留新名称，其余项目保留原名称。</p>
+        <ol>
+          <li>在搜索结果中选择多个项目。</li>
+          <li>从右键菜单中选取<strong>重命名…</strong>。</li>
+          <li>替换所有名称中都包含的文字，或在名称前后添加文字。还可以按列表顺序添加编号。</li>
+          <li>在预览中确认新名称，然后点按<strong>重命名</strong>。文件的扩展名不会更改。</li>
+        </ol>
+        <p>重命名期间，点按状态栏中的<strong>正在批量重命名…</strong>并确认即可停止。已重命名的项目保留新名称，其余项目保留原名称。</p>
         <h3>在哪里可以了解搜索语法？</h3>
-        <p>打开 App 的<strong>帮助</strong>（⌘?）→"搜索语法和示例"，其中整理了运算符、通配符、函数及示例。</p>
+        <ol>
+          <li>打开 App 的<strong>帮助</strong>（Mac 为 ⌘?，Windows 为 F1）。</li>
+          <li>选择"搜索语法和示例"，其中整理了运算符、通配符、函数及示例。</li>
+        </ol>
       </div>
     </section>
 
@@ -145,28 +282,61 @@
       <h2>繁體中文</h2>
       <div class="contact">
         <h3>聯絡我們</h3>
-        <p class="email"><a href="mailto:seryugun@icloud.com?subject=FileSniffer%20Support">seryugun@icloud.com</a></p>
-        <p>從 App 傳送：按一下說明視窗右上角的<strong>傳送意見回饋</strong>，或在選單列中選擇<strong>說明 → 傳送意見回饋…</strong>，郵件 App 中會開啟一封已填好 App 和 macOS 版本的新郵件。</p>
+        <p class="email"><a data-feedback href="mailto:seryugun@icloud.com?subject=FileSniffer%20Support">seryugun@icloud.com</a></p>
+        <p>從 App 傳送：按一下說明視窗右上角的<strong>傳送意見回饋</strong>。在 Mac 上也可以在選單列中選擇<strong>說明 → 傳送意見回饋…</strong>。郵件 App 中會開啟一封已填好 App 和系統（macOS 或 Windows）版本的新郵件。</p>
         <p class="muted">回報問題時，請說明您做了什麼以及發生了什麼。我們會閱讀每一封郵件並盡快回覆。</p>
       </div>
       <h3>常見問題</h3>
       <div class="faq">
         <h3>如何開始使用？</h3>
-        <p>按一下工具列中的<strong>目標資料夾</strong>，再按一下 <strong>+</strong> 選擇一個資料夾（例如「下載項目」），索引會立即開始。之後在搜尋欄位中輸入，結果會隨輸入即時更新。首次啟動時，螢幕導覽會依序介紹如何加入資料夾以及主要按鈕。</p>
+        <ol>
+          <li>按一下工具列中的<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 目標資料夾</strong>。</li>
+          <li>按一下 <strong>+</strong> 選擇一個資料夾（例如「下載項目」），索引會立即開始。</li>
+          <li>在搜尋欄位中輸入，結果會隨輸入即時更新。</li>
+        </ol>
+        <p>首次啟動時，螢幕導覽會依序介紹如何加入資料夾以及主要按鈕。</p>
         <h3>搜尋結果中沒有出現某個檔案。</h3>
-        <p>請確認包含該檔案的資料夾已加入<strong>目標資料夾</strong>。如果已加入，請按一下<strong>重新整理</strong>，並確認<strong>排除清單</strong>中沒有包含該名稱。</p>
-        <h3>部分資料夾（郵件、訊息等）無法被搜尋。</h3>
-        <p>這些是 macOS 保護的資料夾。請在 系統設定 &gt; 隱私權與安全性 &gt; <strong>完整磁碟取用權限</strong> 中開啟 FileSniffer，然後重新啟動 App。也可以按一下目標資料夾視窗底部的<strong>打開設定…</strong>按鈕直接前往。此權限為選用，不開啟也會索引您選擇的資料夾。</p>
-        <h3>無法為 App（.app）重新命名或將其移到垃圾桶。</h3>
+        <ol>
+          <li>請確認包含該檔案的資料夾已加入<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 目標資料夾</strong>。</li>
+          <li>如果已加入，請按一下<strong>重新整理</strong>。</li>
+          <li>請確認<strong>排除清單</strong>中沒有包含該名稱。</li>
+        </ol>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac：部分資料夾（郵件、訊息等）無法被搜尋。</h3>
+        <p>這些是 macOS 保護的資料夾。要將它們加入搜尋：</p>
+        <ol>
+          <li>按一下目標資料夾視窗底部的<strong>打開設定…</strong>（或前往 系統設定 &gt; 隱私權與安全性 &gt; <strong>完整磁碟取用權限</strong>）。</li>
+          <li>開啟 FileSniffer。</li>
+          <li>重新啟動 App。</li>
+        </ol>
+        <p>此權限為選用，不開啟也會索引您選擇的資料夾。</p>
+        <h3><svg class="os" aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.9-17.9 22.1 0 38.9 17.9 76.8 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-62.3-90-62.2-91.9zm-75.9-176.5c27.3-32.4 24.8-61.9 24-72.2-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.6z"/></svg>Mac：無法為 App（.app）重新命名或將其移到垃圾桶。</h3>
         <p>請在 系統設定 &gt; 隱私權與安全性 &gt; <strong>App 管理</strong> 中開啟 FileSniffer。</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows：刪除的檔案沒有進入資源回收筒。</h3>
+        <p>網路磁碟機和部分卸除式磁碟機沒有資源回收筒。對於這些磁碟機上的項目，FileSniffer 會先詢問是否立即刪除。立即刪除的項目無法復原，請確認清單後再繼續。</p>
+        <h3><svg class="os"><use href="#os-windows"/></svg>Windows：如何尋找內容相同的檔案？</h3>
+        <ol>
+          <li>按一下工具列中的<strong><svg class="folder-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h5l2 2h5.5A2.5 2.5 0 0 1 21 9.5v8A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.5 10h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> 目標資料夾</strong>。</li>
+          <li>開啟視窗底部的<strong>尋找內容相同的檔案（hashdupe:）</strong>。</li>
+          <li>在搜尋框中輸入 <strong>hashdupe:</strong>。</li>
+        </ol>
+        <p>FileSniffer 會在背景讀取檔案內容進行比較，檔案較多或位於網路磁碟機時，首次檢查可能需要一些時間。只有檢查完成的檔案才會出現在結果中。</p>
         <h3>外接磁碟上的檔案不見了。</h3>
         <p>中斷連接磁碟後，對應的目標資料夾會顯示為「找不到」，並從列表中移除。重新連接後會自動重新索引。</p>
         <h3>App 關閉期間的變更沒有反映出來。</h3>
         <p>即時監看僅在 App 執行時運作。請按一下<strong>重新整理</strong>，或設定<strong>自動索引</strong>間隔。</p>
         <h3>如何一次重新命名多個檔案？</h3>
-        <p>在搜尋結果中選取多個項目，然後從右鍵選單中選擇<strong>重新命名…</strong>。你可以取代所有名稱中都包含的文字，或在名稱前後加入文字，還可以依列表順序加上編號。檔案的副檔名不會變更，套用前可以預覽新名稱。重新命名期間，按一下狀態列中的<strong>正在批次重新命名…</strong>並確認即可停止。已重新命名的項目保留新名稱，其餘項目保留原名稱。</p>
+        <ol>
+          <li>在搜尋結果中選取多個項目。</li>
+          <li>從右鍵選單中選擇<strong>重新命名…</strong>。</li>
+          <li>取代所有名稱中都含有的文字，或在名稱前後加入文字。還可以依列表順序加上編號。</li>
+          <li>在預覽中確認新名稱，然後按一下<strong>重新命名</strong>。檔案的副檔名不會變更。</li>
+        </ol>
+        <p>重新命名期間，按一下狀態列中的<strong>正在批次重新命名…</strong>並確認即可停止。已重新命名的項目保留新名稱，其餘項目保留原名稱。</p>
         <h3>在哪裡可以了解搜尋語法？</h3>
-        <p>開啟 App 的<strong>說明</strong>（⌘?）→「搜尋語法與範例」，其中整理了運算子、萬用字元、函式及範例。</p>
+        <ol>
+          <li>開啟 App 的<strong>說明</strong>（Mac 為 ⌘?，Windows 為 F1）。</li>
+          <li>選擇「搜尋語法與範例」，其中整理了運算子、萬用字元、函式及範例。</li>
+        </ol>
       </div>
     </section>
   </main>
