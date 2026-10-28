@@ -23,34 +23,39 @@
     <!-- English -->
     <section class="lang" id="en" lang="en">
       <h2>English</h2>
-      <p class="muted">Effective date: October 5, 2026</p>
-      <p>FileSniffer ("the app") does not collect personal information.</p>
+      <p class="muted">Effective date: October 28, 2026</p>
+      <p>FileSniffer ("the app") does not collect personal information. This policy applies to both the macOS and Windows versions.</p>
       <h3>1. Information we collect</h3>
       <p>None. The app does not collect personal information or send it to the developer or any third party. It uses no advertising, analytics, or tracking, and makes no network connections.</p>
-      <h3>2. Information handled on your Mac</h3>
+      <h3>2. Information handled on your device</h3>
       <ul>
-        <li><strong>File list (index):</strong> the names, paths, sizes, creation and modification dates, and kinds of the files and folders inside the folders you choose are stored in a database on your Mac only. The app does not read file contents.</li>
-        <li><strong>Settings:</strong> target folders (security-scoped bookmarks), saved filters, exclusions, profiles, sort order and columns, and display language are stored only on your Mac.</li>
+        <li><strong>File list (index):</strong> the names, paths, sizes, creation and modification dates, and kinds of the files and folders inside the folders you choose are stored in a database on your device (Mac or Windows PC) only. The app reads file contents only when you turn on <strong>Find files with the same content</strong> below.</li>
+        <li><strong>Find files with the same content (optional, off by default):</strong> only when you turn this on in the Target Folders window, the app reads, on your device, the contents of files that have the same size as another file, and calculates CRC-32 and SHA-256 hashes (short values used to compare contents). Only the hashes are stored in the index database. File contents themselves are never stored or sent off your device, and the original contents cannot be recovered from the hashes. When you turn it off, the app stops reading file contents.</li>
+        <li><strong>Settings:</strong> target folders, saved filters, exclusions, profiles, sort order and columns, display language, and theme are stored only on your device.</li>
         <li>None of this information leaves your device.</li>
       </ul>
       <h3>3. Feedback email</h3>
-      <p>When you click <strong>Send Feedback</strong>, a new message opens in your mail app with the app version, macOS version, and display language filled in. It is sent only if you review and send it yourself, and messages we receive are used only to answer you.</p>
+      <p>When you click <strong>Send Feedback</strong>, a new message opens in your mail app with the app version, operating system (macOS or Windows) version, and display language filled in. It is sent only if you review and send it yourself, and messages we receive are used only to answer you.</p>
       <h3>4. Permissions</h3>
       <ul>
         <li><strong>Folders you choose:</strong> the app accesses only the folders you select.</li>
-        <li><strong>Full Disk Access (optional):</strong> lets the app index file names in folders macOS protects. It never reads file contents.</li>
-        <li><strong>App Management (optional):</strong> lets the app rename apps (.app) or move them to the Trash when you ask.</li>
+        <li><strong>Full Disk Access (macOS, optional):</strong> lets the app index file names in folders macOS protects. File contents are read only when Find files with the same content is on.</li>
+        <li><strong>App Management (macOS, optional):</strong> lets the app rename apps (.app) or move them to the Trash when you ask.</li>
       </ul>
       <h3>5. Deleting your information</h3>
       <ul>
-        <li>Removing a target folder deletes its index.</li>
+        <li>Removing a target folder deletes its index, including its hashes.</li>
+        <li>Rebuilding the index deletes all stored hashes along with the index.</li>
         <li>Deleting a profile deletes its settings and index.</li>
-        <li>Deleting the app deletes everything stored in its app container.</li>
+        <li>Deleting the app deletes everything it stored (the app container on macOS, the app data on Windows).</li>
       </ul>
       <h3>6. Children's privacy</h3>
       <p>The app collects no personal information from anyone.</p>
       <h3>7. Changes</h3>
       <p>Changes to this policy will be posted on this page with a new effective date.</p>
+      <ul>
+        <li>October 28, 2026: added the optional Find files with the same content feature and the Windows version.</li>
+      </ul>
       <h3>8. Contact</h3>
       <p><a href="mailto:seryugun@icloud.com">seryugun@icloud.com</a></p>
     </section>
@@ -58,34 +63,39 @@
     <!-- 한국어 -->
     <section class="lang" id="ko" lang="ko">
       <h2>한국어</h2>
-      <p class="muted">시행일: 2026년 10월 5일</p>
-      <p>FileSniffer(이하 "앱")는 사용자의 개인정보를 수집하지 않습니다.</p>
+      <p class="muted">시행일: 2026년 10월 28일</p>
+      <p>FileSniffer(이하 "앱")는 사용자의 개인정보를 수집하지 않습니다. 이 방침은 macOS판과 Windows판에 함께 적용됩니다.</p>
       <h3>1. 수집하는 정보</h3>
       <p>앱은 개인정보를 수집하거나 개발자 또는 제3자에게 전송하지 않습니다. 광고, 분석(애널리틱스), 추적 도구를 사용하지 않으며 네트워크 통신을 하지 않습니다.</p>
       <h3>2. 앱이 기기 안에서 다루는 정보</h3>
       <ul>
-        <li><strong>파일 목록(색인):</strong> 사용자가 직접 고른 대상 폴더 안의 파일과 폴더의 이름, 경로, 크기, 생성일, 수정일, 파일 형식을 사용자의 Mac 안의 데이터베이스에만 저장합니다. 파일의 내용은 읽지 않습니다.</li>
-        <li><strong>설정:</strong> 대상 폴더(보안 범위 북마크), 저장한 필터, 제외 목록, 프로필, 정렬과 열 구성, 표시 언어를 사용자의 Mac 안에만 저장합니다.</li>
+        <li><strong>파일 목록(색인):</strong> 사용자가 직접 고른 대상 폴더 안의 파일과 폴더의 이름, 경로, 크기, 생성일, 수정일, 파일 형식을 사용자의 기기(Mac 또는 Windows PC) 안의 데이터베이스에만 저장합니다. 파일의 내용은 아래의 <strong>내용이 같은 파일 찾기</strong>를 켠 경우에만 읽습니다.</li>
+        <li><strong>내용이 같은 파일 찾기(선택, 기본값 꺼짐):</strong> 사용자가 대상 폴더 창에서 이 기능을 켠 경우에만, 크기가 같은 다른 파일이 있는 파일의 내용을 기기 안에서 읽어 CRC-32와 SHA-256 해시(내용을 비교하기 위한 짧은 값)를 계산합니다. 계산한 해시만 색인 데이터베이스에 저장하며, 파일 내용 자체는 저장하거나 기기 밖으로 보내지 않습니다. 해시로는 원래 내용을 되살릴 수 없습니다. 기능을 끄면 더 이상 파일 내용을 읽지 않습니다.</li>
+        <li><strong>설정:</strong> 대상 폴더, 저장한 필터, 제외 목록, 프로필, 정렬과 열 구성, 표시 언어, 테마를 사용자의 기기 안에만 저장합니다.</li>
         <li>이 정보는 기기 밖으로 나가지 않습니다.</li>
       </ul>
       <h3>3. 피드백 메일</h3>
-      <p>사용자가 <strong>피드백 보내기</strong>를 누르면 사용자의 메일 앱에서 새 메일이 열립니다. 본문에는 앱 버전, macOS 버전, 앱 표시 언어가 미리 채워집니다. 메일은 사용자가 직접 확인하고 보낼 때만 전달되며, 받은 메일은 문의에 답하는 데만 사용합니다.</p>
+      <p>사용자가 <strong>피드백 보내기</strong>를 누르면 사용자의 메일 앱에서 새 메일이 열립니다. 본문에는 앱 버전, 운영체제(macOS 또는 Windows) 버전, 앱 표시 언어가 미리 채워집니다. 메일은 사용자가 직접 확인하고 보낼 때만 전달되며, 받은 메일은 문의에 답하는 데만 사용합니다.</p>
       <h3>4. 권한</h3>
       <ul>
         <li><strong>사용자가 고른 폴더:</strong> 앱은 사용자가 선택한 폴더에만 접근합니다.</li>
-        <li><strong>전체 디스크 접근 권한(선택):</strong> 켜면 macOS가 보호하는 폴더의 파일 이름도 색인할 수 있습니다. 파일 내용은 읽지 않습니다.</li>
-        <li><strong>앱 관리(선택):</strong> 켜면 사용자가 요청할 때 앱(.app)의 이름을 바꾸거나 휴지통으로 옮길 수 있습니다.</li>
+        <li><strong>전체 디스크 접근 권한(macOS, 선택):</strong> 켜면 macOS가 보호하는 폴더의 파일 이름도 색인할 수 있습니다. 파일 내용은 내용이 같은 파일 찾기를 켠 경우에만 읽습니다.</li>
+        <li><strong>앱 관리(macOS, 선택):</strong> 켜면 사용자가 요청할 때 앱(.app)의 이름을 바꾸거나 휴지통으로 옮길 수 있습니다.</li>
       </ul>
       <h3>5. 정보 삭제</h3>
       <ul>
-        <li>대상 폴더를 제거하면 그 폴더의 색인이 삭제됩니다.</li>
+        <li>대상 폴더를 제거하면 그 폴더의 색인과 해시가 삭제됩니다.</li>
+        <li>전체 다시 색인하면 저장된 해시도 색인과 함께 삭제됩니다.</li>
         <li>프로필을 삭제하면 그 프로필의 설정과 색인이 삭제됩니다.</li>
-        <li>앱을 삭제하면 앱 컨테이너에 저장된 모든 정보가 함께 삭제됩니다.</li>
+        <li>앱을 삭제하면 앱이 저장한 모든 정보(macOS는 앱 컨테이너, Windows는 앱 데이터)가 함께 삭제됩니다.</li>
       </ul>
       <h3>6. 어린이의 개인정보</h3>
       <p>앱은 어떤 사용자에게서도 개인정보를 수집하지 않습니다.</p>
       <h3>7. 변경</h3>
       <p>이 방침이 바뀌면 이 페이지에 게시하고 시행일을 고칩니다.</p>
+      <ul>
+        <li>2026년 10월 28일: 선택 기능인 내용이 같은 파일 찾기와 Windows판에 대한 내용을 추가했습니다.</li>
+      </ul>
       <h3>8. 문의</h3>
       <p><a href="mailto:seryugun@icloud.com">seryugun@icloud.com</a></p>
     </section>
@@ -93,34 +103,39 @@
     <!-- 日本語 -->
     <section class="lang" id="ja" lang="ja">
       <h2>日本語</h2>
-      <p class="muted">施行日：2026年10月5日</p>
-      <p>FileSniffer（以下「本アプリ」）は、ユーザーの個人情報を収集しません。</p>
+      <p class="muted">施行日：2026年10月28日</p>
+      <p>FileSniffer（以下「本アプリ」）は、ユーザーの個人情報を収集しません。本ポリシーは macOS 版と Windows 版の両方に適用されます。</p>
       <h3>1. 収集する情報</h3>
       <p>本アプリは個人情報を収集せず、開発者や第三者に送信することもありません。広告、分析（アナリティクス）、トラッキングツールは使用せず、ネットワーク通信も行いません。</p>
-      <h3>2. Mac 内で扱う情報</h3>
+      <h3>2. デバイス内で扱う情報</h3>
       <ul>
-        <li><strong>ファイル一覧（索引）：</strong>ユーザーが選んだ対象フォルダ内のファイルとフォルダの名前、パス、サイズ、作成日、変更日、種類を、ユーザーの Mac 内のデータベースにのみ保存します。ファイルの内容は読み取りません。</li>
-        <li><strong>設定：</strong>対象フォルダ（セキュリティスコープ付きブックマーク）、保存したフィルタ、除外リスト、プロファイル、並べ替えと列の構成、表示言語を、ユーザーの Mac 内にのみ保存します。</li>
+        <li><strong>ファイル一覧（索引）：</strong>ユーザーが選んだ対象フォルダ内のファイルとフォルダの名前、パス、サイズ、作成日、変更日、種類を、ユーザーのデバイス（Mac または Windows PC）内のデータベースにのみ保存します。ファイルの内容は、下記の<strong>内容が同じファイルを探す</strong>をオンにした場合にのみ読み取ります。</li>
+        <li><strong>内容が同じファイルを探す（任意、初期設定はオフ）：</strong>ユーザーが対象フォルダウインドウでこの機能をオンにした場合にのみ、サイズが同じほかのファイルがあるファイルの内容をデバイス内で読み取り、CRC-32 と SHA-256 のハッシュ（内容を比較するための短い値）を計算します。データベースに保存するのは計算したハッシュだけで、ファイルの内容そのものを保存したり、デバイスの外に送ったりすることはありません。ハッシュから元の内容を復元することはできません。オフにすると、ファイルの内容は読み取らなくなります。</li>
+        <li><strong>設定：</strong>対象フォルダ、保存したフィルタ、除外リスト、プロファイル、並べ替えと列の構成、表示言語、テーマを、ユーザーのデバイス内にのみ保存します。</li>
         <li>これらの情報がデバイスの外に送られることはありません。</li>
       </ul>
       <h3>3. フィードバックメール</h3>
-      <p><strong>フィードバックを送信</strong>をクリックすると、メールアプリで新規メールが開き、本文にアプリのバージョン、macOS のバージョン、表示言語があらかじめ記入されます。メールはユーザーが内容を確認して自ら送信した場合にのみ送られ、受け取ったメールはお問い合わせへの返答にのみ使用します。</p>
+      <p><strong>フィードバックを送信</strong>をクリックすると、メールアプリで新規メールが開き、本文にアプリのバージョン、OS（macOS または Windows）のバージョン、表示言語があらかじめ記入されます。メールはユーザーが内容を確認して自ら送信した場合にのみ送られ、受け取ったメールはお問い合わせへの返答にのみ使用します。</p>
       <h3>4. 権限</h3>
       <ul>
         <li><strong>ユーザーが選んだフォルダ：</strong>本アプリはユーザーが選択したフォルダにのみアクセスします。</li>
-        <li><strong>フルディスクアクセス（任意）：</strong>オンにすると、macOS が保護しているフォルダのファイル名も索引できます。ファイルの内容は読み取りません。</li>
-        <li><strong>アプリ管理（任意）：</strong>オンにすると、ユーザーが求めたときにアプリ（.app）の名前を変更したり、ゴミ箱に入れたりできます。</li>
+        <li><strong>フルディスクアクセス（macOS、任意）：</strong>オンにすると、macOS が保護しているフォルダのファイル名も索引できます。ファイルの内容は、内容が同じファイルを探すをオンにした場合にのみ読み取ります。</li>
+        <li><strong>アプリ管理（macOS、任意）：</strong>オンにすると、ユーザーが求めたときにアプリ（.app）の名前を変更したり、ゴミ箱に入れたりできます。</li>
       </ul>
       <h3>5. 情報の削除</h3>
       <ul>
-        <li>対象フォルダを削除すると、そのフォルダの索引が削除されます。</li>
+        <li>対象フォルダを削除すると、そのフォルダの索引とハッシュが削除されます。</li>
+        <li>索引を再作成すると、保存されたハッシュも索引とともに削除されます。</li>
         <li>プロファイルを削除すると、そのプロファイルの設定と索引が削除されます。</li>
-        <li>本アプリを削除すると、アプリのコンテナに保存されたすべての情報が削除されます。</li>
+        <li>本アプリを削除すると、本アプリが保存したすべての情報（macOS ではアプリのコンテナ、Windows ではアプリのデータ）が削除されます。</li>
       </ul>
       <h3>6. 子どものプライバシー</h3>
       <p>本アプリは、どのユーザーからも個人情報を収集しません。</p>
       <h3>7. 変更</h3>
       <p>本ポリシーを変更する場合は、このページに掲載し、施行日を更新します。</p>
+      <ul>
+        <li>2026年10月28日：任意機能「内容が同じファイルを探す」と Windows 版についての記載を追加しました。</li>
+      </ul>
       <h3>8. お問い合わせ</h3>
       <p><a href="mailto:seryugun@icloud.com">seryugun@icloud.com</a></p>
     </section>
@@ -128,34 +143,39 @@
     <!-- 简体中文 -->
     <section class="lang" id="zh-hans" lang="zh-Hans">
       <h2>简体中文</h2>
-      <p class="muted">生效日期：2026年10月5日</p>
-      <p>FileSniffer（以下简称"本 App"）不收集用户的个人信息。</p>
+      <p class="muted">生效日期：2026年10月28日</p>
+      <p>FileSniffer（以下简称"本 App"）不收集用户的个人信息。本政策同时适用于 macOS 版和 Windows 版。</p>
       <h3>1. 收集的信息</h3>
       <p>本 App 不收集个人信息，也不会将其发送给开发者或任何第三方。本 App 不使用广告、分析或跟踪工具，也不进行任何网络连接。</p>
-      <h3>2. 在 Mac 上处理的信息</h3>
+      <h3>2. 在设备上处理的信息</h3>
       <ul>
-        <li><strong>文件列表（索引）：</strong>您选择的目标文件夹中文件和文件夹的名称、路径、大小、创建日期、修改日期和类型，仅存储在您 Mac 上的数据库中。本 App 不读取文件内容。</li>
-        <li><strong>设置：</strong>目标文件夹（安全范围书签）、已存储的过滤器、排除列表、描述文件、排序和列设置以及显示语言，仅存储在您的 Mac 上。</li>
+        <li><strong>文件列表（索引）：</strong>您选择的目标文件夹中文件和文件夹的名称、路径、大小、创建日期、修改日期和类型，仅存储在您设备（Mac 或 Windows PC）上的数据库中。只有在您打开下方的<strong>查找内容相同的文件</strong>时，本 App 才会读取文件内容。</li>
+        <li><strong>查找内容相同的文件（可选，默认关闭）：</strong>只有在您于目标文件夹窗口中打开此功能时，本 App 才会在设备上读取与其他文件大小相同的文件的内容，并计算 CRC-32 和 SHA-256 哈希值（用于比较内容的简短数值）。数据库中只存储计算出的哈希值，文件内容本身不会被存储，也不会离开您的设备，且无法从哈希值还原原始内容。关闭此功能后，本 App 将不再读取文件内容。</li>
+        <li><strong>设置：</strong>目标文件夹、已存储的过滤器、排除列表、描述文件、排序和列设置、显示语言以及主题，仅存储在您的设备上。</li>
         <li>这些信息不会离开您的设备。</li>
       </ul>
       <h3>3. 反馈邮件</h3>
-      <p>点按<strong>发送反馈</strong>后，您的邮件 App 中会打开一封新邮件，正文中预先填好 App 版本、macOS 版本和显示语言。只有在您亲自确认并发送时邮件才会发出，收到的邮件仅用于回复您的咨询。</p>
+      <p>点按<strong>发送反馈</strong>后，您的邮件 App 中会打开一封新邮件，正文中预先填好 App 版本、操作系统（macOS 或 Windows）版本和显示语言。只有在您亲自确认并发送时邮件才会发出，收到的邮件仅用于回复您的咨询。</p>
       <h3>4. 权限</h3>
       <ul>
         <li><strong>您选择的文件夹：</strong>本 App 只访问您选择的文件夹。</li>
-        <li><strong>完全磁盘访问权限（可选）：</strong>打开后，本 App 也可以索引 macOS 保护的文件夹中的文件名。本 App 不读取文件内容。</li>
-        <li><strong>App 管理（可选）：</strong>打开后，本 App 可以在您要求时为 App（.app）重命名或将其移到废纸篓。</li>
+        <li><strong>完全磁盘访问权限（macOS，可选）：</strong>打开后，本 App 也可以索引 macOS 保护的文件夹中的文件名。只有在打开查找内容相同的文件时，本 App 才会读取文件内容。</li>
+        <li><strong>App 管理（macOS，可选）：</strong>打开后，本 App 可以在您要求时为 App（.app）重命名或将其移到废纸篓。</li>
       </ul>
       <h3>5. 删除信息</h3>
       <ul>
-        <li>移除目标文件夹会删除该文件夹的索引。</li>
+        <li>移除目标文件夹会删除该文件夹的索引和哈希值。</li>
+        <li>重建索引会将已存储的哈希值与索引一并删除。</li>
         <li>删除描述文件会删除该描述文件的设置和索引。</li>
-        <li>删除本 App 会删除其 App 容器中存储的所有信息。</li>
+        <li>删除本 App 会删除其存储的所有信息（macOS 上的 App 容器，Windows 上的 App 数据）。</li>
       </ul>
       <h3>6. 儿童隐私</h3>
       <p>本 App 不收集任何用户的个人信息。</p>
       <h3>7. 变更</h3>
       <p>本政策如有变更，将在此页面发布并更新生效日期。</p>
+      <ul>
+        <li>2026年10月28日：新增可选功能"查找内容相同的文件"以及 Windows 版的相关说明。</li>
+      </ul>
       <h3>8. 联系方式</h3>
       <p><a href="mailto:seryugun@icloud.com">seryugun@icloud.com</a></p>
     </section>
@@ -163,34 +183,39 @@
     <!-- 繁體中文 -->
     <section class="lang" id="zh-hant" lang="zh-Hant">
       <h2>繁體中文</h2>
-      <p class="muted">生效日期：2026年10月5日</p>
-      <p>FileSniffer（以下簡稱「本 App」）不會收集使用者的個人資料。</p>
+      <p class="muted">生效日期：2026年10月28日</p>
+      <p>FileSniffer（以下簡稱「本 App」）不會收集使用者的個人資料。本政策同時適用於 macOS 版與 Windows 版。</p>
       <h3>1. 收集的資訊</h3>
       <p>本 App 不會收集個人資料，也不會將其傳送給開發者或任何第三方。本 App 不使用廣告、分析或追蹤工具，也不會進行任何網路連線。</p>
-      <h3>2. 在 Mac 上處理的資訊</h3>
+      <h3>2. 在裝置上處理的資訊</h3>
       <ul>
-        <li><strong>檔案列表（索引）：</strong>您選擇的目標資料夾中檔案與資料夾的名稱、路徑、大小、建立日期、修改日期和類型，僅儲存在您 Mac 上的資料庫中。本 App 不會讀取檔案內容。</li>
-        <li><strong>設定：</strong>目標資料夾（安全範圍書籤）、已儲存的篩選條件、排除清單、設定檔、排序與欄位設定以及顯示語言，僅儲存在您的 Mac 上。</li>
+        <li><strong>檔案列表（索引）：</strong>您選擇的目標資料夾中檔案與資料夾的名稱、路徑、大小、建立日期、修改日期和類型，僅儲存在您裝置（Mac 或 Windows PC）上的資料庫中。只有在您開啟下方的<strong>尋找內容相同的檔案</strong>時，本 App 才會讀取檔案內容。</li>
+        <li><strong>尋找內容相同的檔案（選用，預設關閉）：</strong>只有在您於目標資料夾視窗中開啟此功能時，本 App 才會在裝置上讀取與其他檔案大小相同的檔案內容，並計算 CRC-32 與 SHA-256 雜湊值（用於比較內容的簡短數值）。資料庫中只儲存計算出的雜湊值，檔案內容本身不會被儲存，也不會離開您的裝置，且無法從雜湊值還原原始內容。關閉此功能後，本 App 將不再讀取檔案內容。</li>
+        <li><strong>設定：</strong>目標資料夾、已儲存的篩選條件、排除清單、設定檔、排序與欄位設定、顯示語言以及主題，僅儲存在您的裝置上。</li>
         <li>這些資訊不會離開您的裝置。</li>
       </ul>
       <h3>3. 意見回饋郵件</h3>
-      <p>按一下<strong>傳送意見回饋</strong>後，您的郵件 App 中會開啟一封新郵件，內文預先填入 App 版本、macOS 版本和顯示語言。只有在您親自確認並傳送時郵件才會寄出，收到的郵件僅用於回覆您的詢問。</p>
+      <p>按一下<strong>傳送意見回饋</strong>後，您的郵件 App 中會開啟一封新郵件，內文預先填入 App 版本、作業系統（macOS 或 Windows）版本和顯示語言。只有在您親自確認並傳送時郵件才會寄出，收到的郵件僅用於回覆您的詢問。</p>
       <h3>4. 權限</h3>
       <ul>
         <li><strong>您選擇的資料夾：</strong>本 App 只會取用您選擇的資料夾。</li>
-        <li><strong>完整磁碟取用權限（選用）：</strong>開啟後，本 App 也能索引 macOS 保護的資料夾中的檔案名稱。本 App 不會讀取檔案內容。</li>
-        <li><strong>App 管理（選用）：</strong>開啟後，本 App 可在您要求時為 App（.app）重新命名或將其移到垃圾桶。</li>
+        <li><strong>完整磁碟取用權限（macOS，選用）：</strong>開啟後，本 App 也能索引 macOS 保護的資料夾中的檔案名稱。只有在開啟尋找內容相同的檔案時，本 App 才會讀取檔案內容。</li>
+        <li><strong>App 管理（macOS，選用）：</strong>開啟後，本 App 可在您要求時為 App（.app）重新命名或將其移到垃圾桶。</li>
       </ul>
       <h3>5. 刪除資訊</h3>
       <ul>
-        <li>移除目標資料夾會刪除該資料夾的索引。</li>
+        <li>移除目標資料夾會刪除該資料夾的索引與雜湊值。</li>
+        <li>重建索引會將已儲存的雜湊值與索引一併刪除。</li>
         <li>刪除設定檔會刪除該設定檔的設定和索引。</li>
-        <li>刪除本 App 會刪除其 App 容器中儲存的所有資訊。</li>
+        <li>刪除本 App 會刪除其儲存的所有資訊（macOS 上的 App 容器，Windows 上的 App 資料）。</li>
       </ul>
       <h3>6. 兒童隱私</h3>
       <p>本 App 不會向任何使用者收集個人資料。</p>
       <h3>7. 變更</h3>
       <p>本政策如有變更，將在此頁面公布並更新生效日期。</p>
+      <ul>
+        <li>2026年10月28日：新增選用功能「尋找內容相同的檔案」以及 Windows 版的相關說明。</li>
+      </ul>
       <h3>8. 聯絡方式</h3>
       <p><a href="mailto:seryugun@icloud.com">seryugun@icloud.com</a></p>
     </section>
