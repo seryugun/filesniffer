@@ -8,6 +8,14 @@ if (isMac) {
   });
 }
 
+// Microsoft Store 링크: 웹 주소(apps.microsoft.com)는 브라우저에서 소개 페이지를 엽니다.
+// Windows에서는 ms-windows-store:// 주소로 바꿔 Microsoft Store 앱의 FileSniffer 페이지가 바로 열리게 합니다.
+if (/Win/.test(navigator.platform)) {
+  document.querySelectorAll('[data-msstore]').forEach(a => {
+    a.href = 'ms-windows-store://pdp/?productid=9PBN8PLCWSG6';
+  });
+}
+
 // 언어 메뉴에서 고른 언어를 기억해, 다음에 index.html로 들어와도 그 언어로 보여 줍니다.
 document.querySelectorAll('.lang-menu a').forEach(a => a.addEventListener('click', () => {
   try { localStorage.setItem('fs-lang', a.hreflang); } catch (e) {}
